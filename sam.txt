@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 kjw
 weugf
 sam txt
@@ -50,3 +51,6 @@ iuegiuefgieufg3efug3efug
 
 oepf
 ;oemf
+=======
+hi
+>>>>>>> d4b2bb7321577cefd42f341e16e3a0a0a71fd458
