@@ -5,7 +5,7 @@ pipeline{
         stage("build"){
             steps{
                 withCredentials([usernamePassword(credentialsId:'docker-repo' , usernameVariable:'user' , passwordVariable:'pass')]){
-                sh " docker login -u $user -p $pass "
+                sh "echo $pass | docker login -u $user --password-stdin"
                 
             }
             sh " docker build -t sample:1.3 . "
