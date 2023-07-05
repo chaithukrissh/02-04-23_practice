@@ -4,17 +4,19 @@ pipeline{
     stages{
         stage("build"){
             steps{
+                withCredentials([usernamePassword(credentialsId:'docker-repo' , usernameVariable:'user' , passwordVariable:'pass')]){
+                sh " docker login -u $user -p $pass "
                 sh " docker build -t sample:1.3 . "
             }
             // post{
             //     always{
-            //         echo "========always========"
+            //         echo "======== always ========"
             //     }
             //     success{
-            //         echo "========A executed successfully========"
+            //         echo "======== A executed successfully ========"
             //     }
             //     failure{
-            //         echo "========A execution failed========"
+            //         echo "======== A execution failed ========"
             //     }
             // }
         }
@@ -35,4 +37,5 @@ pipeline{
     //         echo "========pipeline execution failed========"
     //     }
     // }
+}
 }
