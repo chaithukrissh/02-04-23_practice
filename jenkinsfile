@@ -9,7 +9,7 @@ pipeline{
                     }
                         
                     
-                    sh " docker build -t sample:1.3 . "
+                    sh " bash arg.sh"
             }
         }
         stage("test"){
