@@ -2,4 +2,14 @@ FROM ubuntu
 
 COPY b.sh .
 
+ARG APP_VERSION
+
+ENV APP_VERSION=$APP_VERSION
+
+ARG IMAGE_NAME
+
+ENV IMAGE_NAME=$IMAGE_NAME
+
+
+
 CMD [ "bash" , "b.sh" ]
